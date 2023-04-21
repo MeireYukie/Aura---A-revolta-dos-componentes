@@ -8,6 +8,7 @@
     <aura:attribute name="leadCompany" type="String" />
     <aura:attribute name="leadMobilePhone" type="String" />
     <aura:attribute name="leadEmail" type="String" />
+    <aura:attribute name="objLead" type="Lead" default="{'sObject':'Lead'}" />
 
 <!--Esse é um elemento div com uma classe slds-page-header. Ele é usado para exibir um título na parte superior da página do formulário de conta.-->    
     <div class="slds-page-header">
