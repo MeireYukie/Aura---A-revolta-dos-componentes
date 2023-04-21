@@ -1,0 +1,33 @@
+<!--Video tutorial https://www.youtube.com/watch?v=fy4gGdlOdgc&t=128s -->
+
+<aura:component controller="ProjetoMamaco1Apex" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+<!--Esses são os atributos do componente. Eles representam o primeiro nome, sobrenome, empresa, celular e email do Lead.-->    
+    <aura:attribute name="leadFirstName" type="String" />
+    <aura:attribute name="leadLastName" type="String" />
+    <aura:attribute name="leadCompany" type="String" />
+    <aura:attribute name="leadMobilePhone" type="String" />
+    <aura:attribute name="leadEmail" type="String" />
+
+<!--Esse é um elemento div com uma classe slds-page-header. Ele é usado para exibir um título na parte superior da página do formulário de conta.-->    
+    <div class="slds-page-header">
+        <strong>Formulário de Criação de Novos Leads</strong>    
+    </div>
+
+<!--Este é um elemento div que contém três componentes Lightning: Input. Esses componentes representam campos de entrada de texto para o nome, sobrenome,
+empresa, celular e email do Lead. O atributo 'aura:id' é usado para identificar os campos no código JavaScript que controla o componente.-->    
+    <div>
+        <lightning:input type="text" label="Nome" aura:id="leadFirstName" value="{!v.objLead.Name}" required="true" messageWhenValueMissing="Por favor, preencha o campo corretamente"/>
+        <lightning:input type="text" label="Sobrenonome" aura:id="leadLastName" value="{!v.objLead.Phone}" required="true"/>
+        <lightning:input type="text" label="Nome da empresa" aura:id="leadCompany" value="{!v.objLead.Company}" required="true"/>
+        <lightning:input type="text" label="Celular" aura:id="leadMobilePhone" value="{!v.objLead.MobilePhone}" required="true"/>
+        <lightning:input type="text" label="Email" aura:id="leadEmail" value="{!v.objLead.Email}" required="true"/>
+    </div>
+
+<!--Este é outro elemento div que contém um botão Lightning: Button com um rótulo "Criar Lead". Quando o botão é clicado, ele chama a função 
+'creatMamaco' no controlador (controller) do componente.-->    
+    <div class="slds-page-header"> 
+        <lightning:button label="Criar Lead" variant="brand" onclick="{!c.creatMamaco}" />
+    </div>
+    
+</aura:component>
