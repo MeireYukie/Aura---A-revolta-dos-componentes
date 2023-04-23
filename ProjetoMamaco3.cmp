@@ -31,6 +31,9 @@ Ele chama um método no controlador chamado doInit para carregar dados iniciais 
                     <th scope="col">
                         <div class="slds-truncate" title="Status">Status</div>
                     </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Bottom"> </div>
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -43,13 +46,13 @@ Ele chama um método no controlador chamado doInit para carregar dados iniciais 
                         <td>{!lead.Email}</td>
                         <td><ui:outputDate value="{!lead.CreatedDate}" format="dd/MM/yyyy" /></td> 
                         
-                        <lightning:recordEditForm recordId="{!v.recordId}" objectApiName="Lead">                        
+                         <td><lightning:recordEditForm recordId="{!v.recordId}" objectApiName="Lead">                        
                             <lightning:inputField fieldName="Status"/>                        
-                        </lightning:recordEditForm>                    
+                        </lightning:recordEditForm> </td>                    
                         
                         <!-- <force:recordEdit aura:id="edit" recordId="{!v.Lead.recordId}"/> -->
                         
-                        <lightning:button label="Salvar" variant="brand" onclick="{!c.save}" />                    
+                        <td><lightning:button label="Salvar" variant="brand" onclick="{!c.save}" /> </td>                   
                     </tr>
                 </aura:iteration>
             </tbody>
