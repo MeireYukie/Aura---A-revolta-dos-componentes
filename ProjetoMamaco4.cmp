@@ -1,6 +1,6 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
     <!-- Título do formulário-->   
-    <lightning:card title="Lista Compras para o escritório">
+    <lightning:card title="Qual material está faltando no escritório?">
         <div class="slds-p-horizontal_small">
             <!--Criando um registro => Documentação salesforce => recordEditForm => Creating a Record -->        
             <lightning:recordEditForm aura:id="recordEditForm" objectApiName="Compras__c" onsuccess="{!c.handleSuccess}">
