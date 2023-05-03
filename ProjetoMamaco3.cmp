@@ -4,6 +4,7 @@
     <!-- Define um atributo do componente chamado leads com o tipo Lead[]. 
 Este atributo será preenchido com dados do controlador. -->    
     <aura:attribute name="leads" type="Lead[]" />
+    <lightning:navigation aura:id="navService"/>
     <!-- Define um handler que é acionado quando o componente é inicializado. 
 Ele chama um método no controlador chamado doInit para carregar dados iniciais para o atributo leads. -->    
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
@@ -48,10 +49,8 @@ Ele chama um método no controlador chamado doInit para carregar dados iniciais 
                         
                          <td><lightning:recordEditForm recordId="{!v.recordId}" objectApiName="Lead">                        
                             <lightning:inputField fieldName="Status"/>                        
-                        </lightning:recordEditForm> </td>                    
-                        
-                        <!-- <force:recordEdit aura:id="edit" recordId="{!v.Lead.recordId}"/> -->
-                        
+                        </lightning:recordEditForm> </td>               
+         
                         <td><lightning:button label="Salvar" variant="brand" onclick="{!c.save}" /> </td>                   
                     </tr>
                 </aura:iteration>
